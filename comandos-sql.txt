@@ -58,3 +58,24 @@ insert into client
 values
 ( uuid_generate_v4(), 'client-production', '$2a$12$rQP5KtueNXW4oahOUBYQF.ax/GSucZlPr/ohMeC9ur747lEEnQIYu
 ','http://localhost:8080/authorized' , 'GERENTE');
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+insert into usuario
+(id, login, senha, email, roles)
+values
+( uuid_generate_v4(), 'gerente', '$2a$12$EE5DXjjKJCGghT6fNrN7K.SotRGJ6HygjMABC546WVloh9jv4Nymy
+', 'gerente@email.com', '{GERENTE}' );
+
+-- admin123
+
+SELECT *
+	FROM public.client;
+
+insert into client
+(id, client_id, client_secret, redirect_uri, scope)
+values
+( uuid_generate_v4(), 'client-production', '$2a$12$/G97WzxH0pSG3aNzVrCEEeWVyvfeeDIZ2CwuVORAcydi9g.BwWLGW
+','http://localhost:8080/authorized' , 'GERENTE');
+
+-- client-secret
