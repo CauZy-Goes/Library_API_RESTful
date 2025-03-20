@@ -79,3 +79,20 @@ values
 ','http://localhost:8080/authorized' , 'GERENTE');
 
 -- client-secret
+
+
+-- PRODUÇÃO
+
+insert into usuario
+(id, login, senha, email, roles)
+values
+( uuid_generate_v4(), 'gerente', '$2a$12$fCceeuVn19XdlWvAPF7D6eKvQfWIGe.yM9ZDn6fay2wnvWJWp8Lt.', 'gerente@email.com', '{GERENTE}' );
+
+--admin123
+
+insert into client
+(id, client_id, client_secret, redirect_uri, scope)
+values
+( uuid_generate_v4(), 'client-production', '$2a$12$D4VJdVnmUKWDgmlacpqRAuGDSAihkP7ve1ynCJC3dXhuiGQnXqpL6','http://localhost:8080/authorized' , 'GERENTE');
+
+--secret-production

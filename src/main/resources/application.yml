@@ -8,9 +8,9 @@ spring:
     ansi:
       enabled: ALWAYS
   datasource:
-    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/library}
-    username: ${DATASOURCE_USERNAME:postgres}
-    password: ${DATASOURCE_PASSWORD:postgres}
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5433/library}
+    username: ${DATASOURCE_USERNAME:postgresprod}
+    password: ${DATASOURCE_PASSWORD:postgresprod}
     driver-class-name: org.postgresql.Driver
   jpa:
     show-sql: true
